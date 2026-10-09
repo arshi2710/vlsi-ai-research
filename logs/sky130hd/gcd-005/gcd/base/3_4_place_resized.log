@@ -1,0 +1,74 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db -hier ./results/sky130hd/gcd/base/3_3_place_gp.odb
+[WARNING ORD-0012] Hierarchical flow (-hier) is currently in development and may cause multiple issues. Do not use in production environments.
+read_sdc ./results/sky130hd/gcd/base/2_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       418
+       10 |     +0.0% |       0 |       0 |             0 |       408
+       20 |     +0.0% |       0 |       0 |             0 |       398
+       30 |     +0.0% |       0 |       0 |             0 |       388
+       40 |     +0.0% |       0 |       0 |             0 |       378
+       50 |     +0.0% |       0 |       0 |             0 |       368
+       60 |     +0.0% |       0 |       0 |             0 |       358
+       70 |     +0.0% |       0 |       0 |             0 |       348
+       80 |     +0.0% |       0 |       0 |             0 |       338
+       90 |     +0.0% |       0 |       0 |             0 |       328
+      100 |     +0.0% |       0 |       0 |             0 |       318
+      110 |     +0.0% |       0 |       0 |             0 |       308
+      120 |     +0.0% |       0 |       0 |             0 |       298
+      130 |     +0.0% |       0 |       0 |             0 |       288
+      140 |     +0.0% |       0 |       0 |             0 |       278
+      150 |     +0.0% |       0 |       0 |             0 |       268
+      160 |     +0.0% |       0 |       0 |             0 |       258
+      170 |     +0.0% |       0 |       0 |             0 |       248
+      180 |     +0.0% |       0 |       0 |             0 |       238
+      190 |     +0.0% |       0 |       0 |             0 |       228
+      200 |     +0.0% |       0 |       0 |             0 |       218
+      210 |     +0.0% |       0 |       0 |             0 |       208
+      220 |     +0.0% |       0 |       0 |             0 |       198
+      230 |     +0.0% |       0 |       0 |             0 |       188
+      240 |     +0.0% |       0 |       0 |             0 |       178
+      250 |     +0.0% |       0 |       0 |             0 |       168
+      260 |     +0.0% |       0 |       0 |             0 |       158
+      270 |     +0.0% |       0 |       0 |             0 |       148
+      280 |     +0.0% |       0 |       0 |             0 |       138
+      290 |     +0.0% |       0 |       0 |             0 |       128
+      300 |     +0.0% |       0 |       0 |             0 |       118
+      310 |     +0.0% |       0 |       0 |             0 |       108
+      320 |     +0.0% |       0 |       0 |             0 |        98
+      330 |     +0.0% |       0 |       0 |             0 |        88
+      340 |     +0.0% |       0 |       0 |             0 |        78
+      350 |     +0.0% |       0 |       0 |             0 |        68
+      360 |     +0.0% |       0 |       0 |             0 |        58
+      370 |     +0.0% |       0 |       0 |             0 |        48
+      380 |     +0.0% |       0 |       0 |             0 |        38
+      390 |     +0.0% |       0 |       0 |             0 |        28
+      400 |     +0.0% |       0 |       0 |             0 |        18
+      410 |     +0.0% |       0 |       0 |             0 |         8
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0504] Runtime: 0.05s
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 3802 um^2 60% utilization.
+Instance count before 459, after 459
+Pin count before 1156, after 1156
+write_db ./results/sky130hd/gcd/base/3_4_place_resized.odb
+Elapsed time: 0:00.71[h:]min:sec. CPU time: user 0.59 sys 0.11 (97%). Peak memory: 136960KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+3_4_place_resized      .odb          0        1     0.99      133 c02fa9e924
