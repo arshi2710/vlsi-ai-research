@@ -1,0 +1,15 @@
+{
+  "design": "gcd",
+  "platform": "sky130hd",
+  "technology": "SKY130",
+  "sample_id": "sample_001",
+  "area_um2": 5412.69,
+  "setup_wns_ns": -1.45954,
+  "setup_tns_ns": -64.9417,
+  "hold_wns_ns": 0.532397,
+  "hold_tns_ns": 0.0,
+  "fmax_mhz": 390.695,
+  "setup_violation_count": 63,
+  "hold_violation_count": 0,
+  "flow_errors": 0
+}
